@@ -1,4 +1,3 @@
-Changes made
 %Demo algorithm synthesis based on causal OZF multipliers. 
 %
 %The theory is exposed in C.W. Scherer, Ch. Ebenbauer, T. Holicki, 
