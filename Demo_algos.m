@@ -10,6 +10,7 @@
 %Generation of Figs. 8-10.
 
 clear
+close all
 addpath('Code')          
 
 z=zpk('z');
@@ -79,7 +80,7 @@ ploqua(T,psim)
 %simulation for non-quadratic function 
 T=100;
 figure(2);clf;
-plonl(T,psim)
+plonq(T,psim)
 
 %use designed algorithm in Case 4
 psim.alg=lft(s2.P,s2.K);
@@ -91,7 +92,7 @@ ploqua(T,psim)
 
 %simulation for non-quadratic function 
 figure(2);
-plonl(T,psim)
+plonq(T,psim)
 
 %% Simulation 2: Case 5 with unstable plant
 psim.rho=s3.rho;
@@ -103,13 +104,13 @@ psim.L=11;
 
 %simulation for quadratic function 
 T=100;
-figure(1);clf;
+figure(3);clf;
 ploqua(T,psim)
 
 %use designed algorithm from Case 5 for L=10 with function for L=10
 psim.L=10;
 co=lines;psim.col=co(5,:); %line color
-figure(1);
+figure(3);
 ploqua(T,psim)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -146,7 +147,7 @@ p.mul=s.mul;
 s=syzfco(p);
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function plonl(T,p);
+function plonq(T,p);
 %% Simulation with non-quadratic function
 %  p.alg algorithm as LTI system
 
@@ -187,6 +188,7 @@ p.grad=@(z) Q*(z-b);
 
 p.T=T;
 p.d=2;
+%run algsim 
 s=algsim(p);
 
 %plot results 

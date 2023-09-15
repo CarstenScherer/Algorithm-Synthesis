@@ -1,6 +1,5 @@
 %Demo algorithm synthesis based on causal OZF multipliers.
 %
-%
 %The theory is exposed in C.W. Scherer, Ch. Ebenbauer, T. Holicki, 
 %Optimization Algorithm Synthesis based on Integral Quadratic Constraints: A Tutorial, 
 %62nd IEEE Conference on Decision and Control. 
@@ -24,9 +23,10 @@ Gs=ss((z-.5)/((z+1.05)*(z+.5)));
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Compute rates
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-p.Lv=logspace(log10(10),log10(200),10);
+%grid for values of L with m=1
+p.Lv=logspace(log10(10),log10(200),20);
 
-%static multiplier w and G1(z)=G2(z) is gradient descent
+%static multiplier and G1(z)=G2(z) is gradient descent
 p.alpha=[1];
 rhovgd=rates(G1,G1,p)
 
