@@ -1,4 +1,4 @@
-# Optimization Algorithm Synthesis: [![DOI](https://zenodo.org/badge/691960972.svg)](https://zenodo.org/badge/latestdoi/691960972)
+# Optimization Algorithm Synthesis
 
 This is a collection of m-files for the design of optimization algorithms and extremum controllers.
 
