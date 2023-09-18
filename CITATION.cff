@@ -3,7 +3,7 @@ message: "If you use this software, please cite it as below."
 authors:
   - family-names: Scherer   
     given-names: Carsten W.
-    https://zenodo.org/badge/latestdoi/691960972
+    zenodo: https://zenodo.org/badge/latestdoi/691960972
 title: CarstenScherer/Algorithm-Synthesis: Typos corrected
 version: v2
 date-released: 2023-09-15
