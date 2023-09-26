@@ -37,7 +37,7 @@ rhovtm=rates(G1,G1,p)
 
 %dynamic multiplier with alpha(z)=z^2-z0^2 (z0=0.01, l=2 in Step 2) of procedure in Sec. VI)
 %generates curves of Case 3, 4, 5
-p.alpha=[1 0 1e-4];
+p.alpha=[1 0 -1e-4];
 rhov3=rates(G1,Gd,p)
 rhov4=rates(Gd,Gd,p)
 rhov5=rates(G1,Gs,p)
