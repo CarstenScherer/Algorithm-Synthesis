@@ -32,7 +32,7 @@ psim=p;
 %static multiplier with al(z)=1 and G1(z)=G2(z) is gradient descent
 p.alpha=[1];
 sgr=syn(G1,G1,p)
-zpk(sgr.K) %here the icntegrator not incluced 
+zpk(sgr.K) %here the integrator not incluced 
 
 %standard gradient descent with integrator 
 al=2/(p.m+p.L);
