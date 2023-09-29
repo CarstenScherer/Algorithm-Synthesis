@@ -48,6 +48,7 @@ save('rates')
 %% Plot rates
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clf
+figure(WindowState="maximized")
 load('rates')
 rhovg=(p.Lv-1)./(p.Lv+1);
 rhovt=1-1./sqrt(p.Lv);
